@@ -1,0 +1,45 @@
+<?xml encoding="UTF-8" version="1.0"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<unique-id>1542730453612003-3</unique-id>
+	<command>lxterminal --working-directory=%f</command>
+	<description>Example for a custom action</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>folder-saved-search-symbolic</icon>
+	<name>Catfish File Search</name>
+	<unique-id>1574636988000595-1</unique-id>
+	<command>catfish --path=%f</command>
+	<description>Catfish File Search</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>com.visualstudio.code</icon>
+	<name>VSCode Here</name>
+	<unique-id>1579002466186976-1</unique-id>
+	<command>code %f</command>
+	<description></description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>IDEA here</name>
+	<unique-id>1579002580870255-5</unique-id>
+	<command>/bin/sh /opt/idea/bin/idea.sh %f</command>
+	<description></description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+</actions>

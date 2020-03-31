@@ -1,0 +1,42 @@
+# import this configuration from your home .gitconfig
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+
+[alias]
+  alias = "config --get-regexp ^alias\\."
+  s = status -u
+  co = checkout
+  br = branch
+  cr  = clone --recursive
+  cob = checkout -b
+  f   = fetch -p
+  c   = commit
+  p   = push
+  pl  = pull
+  ba  = branch -a
+  bd  = branch -d
+  bD  = branch -D
+  dc  = diff --cached
+  ac = !git add -A && git commit
+  ca = !git add -A && git commit --amend --reuse-message=HEAD
+  ms = merge --squash --no-commit
+  prf = push origin HEAD:refs/for/master
+  dt = difftool --dir-diff
+  gsu = git submodule update --remote
+  gsi = git submodule init
+
+[diff]
+  guitool = kdiff3
+
+[difftool "kdiff3"]
+  path = kdiff3
+  trustExitCode = false
+
+# Enforce ssh connection for known servers
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
+[url "ssh://git@gitlab.com/"]
+  insteadOf = https://gitlab.com/
+[url "ssh://git@bitbucket.org/"]
+  insteadOf = https://bitbucket.org/

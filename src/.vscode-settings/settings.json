@@ -1,0 +1,70 @@
+{
+    "editor.suggestSelection": "first",
+    "breadcrumbs.enabled": true,
+    // terminal
+    "terminal.integrated.scrollback": 1000000,
+    // python
+    "python.pythonPath": "python3",
+    "python.jediEnabled": false,
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.pylintEnabled": true,
+    // C, C++
+    "C_Cpp.formatting": "Disabled",
+    "astyle.cmd_options": [
+        "--style=linux"
+    ],
+    // intellicode
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    // git
+    "git.enableSmartCommit": true,
+    "files.associations": {
+        // freecad
+        "*.FCMacro": "python"
+    },
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.idea": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    // search
+    "search.exclude": {
+        // generic
+        "**/*.log": true,
+        // js
+        "**/node_modules": true,
+        "**/bower_components": true,
+        // python
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        // latex
+        "**/*.aux": true,
+        "**/*.bbl": true,
+        "**/*.blg": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.fls": true,
+        "**/*.synctex.gz": true,
+        "**/*.nav": true,
+        "**/*.out": true,
+        "**/*.snm": true,
+        "**/*.toc": true,
+        "**/*.lof": true,
+        "**/*.lot": true
+    },
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 14,
+    "python.linting.pylintUseMinimalCheckers": false,
+    "window.openFilesInNewWindow": "default",
+    "window.restoreWindows": "none",
+    "workbench.startupEditor": "newUntitledFile",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "window.zoomLevel": 1.5,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
+}

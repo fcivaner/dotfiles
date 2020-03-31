@@ -1,0 +1,2 @@
+# empty .stow-local-ignore file to prevent stow ignoring .gitignore by default
+# See 'info stow' section "4 Ignore Lists" for more information

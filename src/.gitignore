@@ -1,0 +1,31 @@
+syntax: glob
+
+## os
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## editors
+.vscode
+.idea
+*.swp
+*.tmp
+
+## packages
+node_modules/
+
+# security
+.keys
+*.kdb
+*.kdbx
+
+## common
+.~*
+*.~lock*
+*.log
+*.zip
+scratch__*
+
+## python
+*.py[co]
+*.egg-info
