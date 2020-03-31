@@ -1,4 +1,4 @@
-# fcivaner's dotfiles
+# Fırat's dotfiles
 
 My dotfiles for Ubuntu Linux and OSX.
 It includes bash configuration, aliases, scripts, git configuration, configuration for other tools such as vscode along with some structure for flexibility and extendability.
