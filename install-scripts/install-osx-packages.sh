@@ -1,8 +1,8 @@
 #!/bin/bash
 
 (
-    cd config || exit
+    cd install-configurations || exit
     brew bundle
 )
 
-< config/vscode-extensions.txt xargs -L 1 echo code --install-extension | bash
+< install-configurations/vscode-extensions.txt xargs -L 1 echo code --install-extension | bash

@@ -2,7 +2,7 @@
 
 me=$(realpath "${BASH_SOURCE[0]}")
 basedir=$(dirname "$(dirname "$me")")
-brewfile="$basedir/install-scripts/config/Brewfile"
+brewfile="$basedir/install-scripts/install-configurations/Brewfile"
 
 brew bundle dump
 mv "Brewfile" "$brewfile"

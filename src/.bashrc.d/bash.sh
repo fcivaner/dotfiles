@@ -2,6 +2,7 @@
 
 alias c='clear'
 alias reload="source ~/.bashrc"
+alias histsave="history -a"
 
 ## command history
 

@@ -32,13 +32,13 @@ python3 -m pip install --user --upgrade twine
 ## go
 export GO_VERSION="1.13.6"
 (
-tmp_folder=$(mktemp -d)
-cd "$tmp_folder" || exit
-
-wget "https://dl.google.com/go/go$GO_VERSION.linux-amd64.tar.gz"
-sudo tar -C /usr/local -xzf "go$GO_VERSION.linux-amd64.tar.gz"
-
-rm -r "$tmp_folder"
+    tmp_folder=$(mktemp -d)
+    cd "$tmp_folder" || exit
+    
+    wget "https://dl.google.com/go/go$GO_VERSION.linux-amd64.tar.gz"
+    sudo tar -C /usr/local -xzf "go$GO_VERSION.linux-amd64.tar.gz"
+    
+    rm -r "$tmp_folder"
 )
 export GOPATH=$HOME/go
 
@@ -92,24 +92,24 @@ sudo chown -R "$USER" ~/.vim
 
 ## shellcheck
 (
-tmp_folder=$(mktemp -d)
-cd "$tmp_folder" || exit
-
-scversion="stable" # or "v0.4.7", or "latest"
-wget -qO- "https://storage.googleapis.com/shellcheck/shellcheck-${scversion?}.linux.x86_64.tar.xz" | tar -xJv
-sudo cp "shellcheck-${scversion}/shellcheck" /usr/bin/
-shellcheck --version
-
-rm -r "$tmp_folder"
+    tmp_folder=$(mktemp -d)
+    cd "$tmp_folder" || exit
+    
+    scversion="stable" # or "v0.4.7", or "latest"
+    wget -qO- "https://storage.googleapis.com/shellcheck/shellcheck-${scversion?}.linux.x86_64.tar.xz" | tar -xJv
+    sudo cp "shellcheck-${scversion}/shellcheck" /usr/bin/
+    shellcheck --version
+    
+    rm -r "$tmp_folder"
 )
 
 ## fzf
 (
-tmp_dir=$(mktemp -d)
-cd $tmp_dir
-
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+    tmp_dir=$(mktemp -d)
+    cd "$tmp_dir" || exit
+    
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
 )
 
 ## install desktop tools
@@ -123,7 +123,7 @@ sudo apt install -y geany geany-plugins
 ## vscode
 sudo snap install code --classic
 
-< config/vscode-extensions.txt xargs -L 1 echo code --install-extension | bash
+< install-configurations/vscode-extensions.txt xargs -L 1 echo code --install-extension | bash
 
 ## keepass
 sudo add-apt-repository -y ppa:phoerious/keepassxc
@@ -132,19 +132,19 @@ sudo apt install -y keepassxc
 
 ## vagrant
 (
-VAGRANT_VER="2.2.6"
-
-sudo apt -y remove vagrant
-
-tmp_folder=$(mktemp -d)
-cd "$tmp_folder" || exit
-
-wget "https://releases.hashicorp.com/vagrant/${VAGRANT_VER}/vagrant_${VAGRANT_VER}_x86_64.deb"
-sudo dpkg -i vagrant_"${VAGRANT_VER}_x86_64.deb"
-sudo apt -f install
-vagrant plugin expunge --force
-
-rm -r "$tmp_folder"
+    VAGRANT_VER="2.2.6"
+    
+    sudo apt -y remove vagrant
+    
+    tmp_folder=$(mktemp -d)
+    cd "$tmp_folder" || exit
+    
+    wget "https://releases.hashicorp.com/vagrant/${VAGRANT_VER}/vagrant_${VAGRANT_VER}_x86_64.deb"
+    sudo dpkg -i vagrant_"${VAGRANT_VER}_x86_64.deb"
+    sudo apt -f install
+    vagrant plugin expunge --force
+    
+    rm -r "$tmp_folder"
 )
 
 ## virtualbox
