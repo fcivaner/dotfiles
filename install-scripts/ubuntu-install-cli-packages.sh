@@ -110,3 +110,4 @@ sudo chown -R "$USER" ~/.vim
 
 ## sdkman
 curl -s "https://get.sdkman.io" | bash
+
