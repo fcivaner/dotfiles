@@ -18,4 +18,3 @@ for script in ~/.bashrc.d/*
 do
     source "$script"
 done
-

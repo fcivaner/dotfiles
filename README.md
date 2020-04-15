@@ -28,4 +28,3 @@ If you don't want to/can't use stow/symlinks, you can use these utility scripts 
 #### Suggestions
 
 Any suggestions/comments will be very appreciated. Feel free to contact me or open an issue!
-

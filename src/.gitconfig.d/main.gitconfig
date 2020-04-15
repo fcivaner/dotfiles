@@ -19,12 +19,16 @@
   bD  = branch -D
   dc  = diff --cached
   ac = !git add -A && git commit
-  ca = !git add -A && git commit --amend --reuse-message=HEAD
+  acm = !git add -A && git commit -m
+  ca = !git add -A && git commit --amend
+  cam = !git add -A && git commit --amend -m
+  car = !git add -A && git commit --amend --reuse-message=HEAD
   ms = merge --squash --no-commit
   prf = push origin HEAD:refs/for/master
   dt = difftool --dir-diff
-  gsu = git submodule update --remote
-  gsi = git submodule init
+  gsu = submodule update --remote
+  gsi = submodule init
+  clean-untracked = clean -fd
 
 [diff]
   guitool = kdiff3
