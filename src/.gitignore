@@ -27,5 +27,6 @@ node_modules/
 scratch__*
 
 ## python
+.pytest_cache
 *.py[co]
 *.egg-info

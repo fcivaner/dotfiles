@@ -3,6 +3,11 @@
 me=$(realpath "${BASH_SOURCE[0]}")
 basedir=$(dirname "$(dirname "$me")")
 
-# rsync -r src/. ~ # if a symlink farm is not used
+METHOD=stow
 
-stow -t ~/ -d "$basedir" src
+if [[ "$METHOD" == "stow" ]]; then
+    rm -f ~/.config/git/gitk # gitk tends to overwrite links
+    stow -t ~/ -d "$basedir" src
+elif [[ "$METHOD" == "rsync" ]]; then
+    rsync -r src/. ~ # if a symlink farm is not used
+fi

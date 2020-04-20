@@ -5,4 +5,4 @@ sudo apt update
 sudo apt -y dist-upgrade
 sudo apt -y autoremove
 
-snap refresh
+sudo snap refresh

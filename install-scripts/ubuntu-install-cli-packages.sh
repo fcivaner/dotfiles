@@ -23,15 +23,16 @@ python3 -m pip install --user --upgrade setuptools wheel
 python3 -m pip install --user --upgrade twine
 
 ## go
-export GO_VERSION="1.13.6"
+export GO_VERSION="1.14.2"
 (
     tmp_folder=$(mktemp -d)
     cd "$tmp_folder" || exit
-    
+
+    sudo rm -rf /usr/local/go
     wget "https://dl.google.com/go/go$GO_VERSION.linux-amd64.tar.gz"
     sudo tar -C /usr/local -xzf "go$GO_VERSION.linux-amd64.tar.gz"
-    
-    rm -r "$tmp_folder"
+
+    rm -rf "$tmp_folder"
 )
 export GOPATH=$HOME/go
 
@@ -75,7 +76,7 @@ sudo apt install -y mercurial
 
 ## code quality/metrics
 sudo apt install -y cloc
-go get -u github.com/zricethezav/gitleaks
+docker pull zricethezav/gitleaks
 
 ## w3m
 sudo apt install -y w3m
@@ -96,7 +97,7 @@ sudo chown -R "$USER" ~/.vim
     sudo cp "shellcheck-${scversion}/shellcheck" /usr/bin/
     shellcheck --version
     
-    rm -r "$tmp_folder"
+    rm -rf "$tmp_folder"
 )
 
 ## fzf
@@ -105,9 +106,18 @@ sudo chown -R "$USER" ~/.vim
     cd "$tmp_dir" || exit
     
     git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install
+    ~/.fzf/install --no-update-rc --key-bindings --completion
 )
 
 ## sdkman
 curl -s "https://get.sdkman.io" | bash
 
+## aws
+(
+    tmp_dir=$(mktemp -d)
+    cd "$tmp_dir" || exit
+    
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    unzip awscliv2.zip
+    sudo ./aws/install
+)
