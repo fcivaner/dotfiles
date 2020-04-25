@@ -19,6 +19,7 @@ HISTCONTROL=
 HISTSIZE=100000
 HISTFILESIZE=2000000
 HISTTIMEFORMAT=$(echo -e "\e[90m[%d-%m-%yT%H-%M-%S]\e[39m  ")
+HISTIGNORE='rm *:git reset*:g reset*:*password*:[ \t]*'
 
 ## enable programmable completion features (you don't need to enable
 ## this, if it's already enabled in /etc/bash.bashrc and /etc/profile

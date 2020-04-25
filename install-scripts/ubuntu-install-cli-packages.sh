@@ -47,7 +47,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/$DOCKER_COMPOS
 sudo chmod +x /usr/local/bin/docker-compose
 
 ## monitoring
-sudo apt install -y htop iotop sensors
+sudo apt install -y htop iotop sensors nethogs
 
 ## files & compression
 sudo apt install -y p7zip-full unzip
