@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ## pass options to free
 alias meminfo='free -m -l -t'

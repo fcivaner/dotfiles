@@ -9,4 +9,4 @@ enable=quote-safe-variables
 # Turn on warnings for unassigned uppercase variables
 enable=check-unassigned-uppercase
 
-disable=SC2236,SC2088,SC2002,SC1091,SC1090
+disable=SC2236,SC2088,SC2002,SC1091,SC1090,SC1071

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 alias mvn5="JAVA_HOME=/usr/local/java5 && mvn"
 alias mvn6="JAVA_HOME=/usr/local/java6 && mvn"

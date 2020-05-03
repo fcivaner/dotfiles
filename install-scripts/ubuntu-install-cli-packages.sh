@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ## install server tools
 
@@ -10,15 +10,18 @@ sudo apt install -y sshfs jmtpfs gvfs gvfs-backends gvfs-fuse
 ## build tools
 sudo apt install -y build-essential
 
-## node
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo apt install -y nodejs
+## nodejs
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
 ## python
 sudo apt install -y python3 python3-pip
-python3 -m pip install -U pycodestyle --user
-python3 -m pip install -U pylint --user
-python3 -m pip install -U autopep8 --user
+python3 -m pip install -U \
+pycodestyle \
+pylint \
+autopep8 \
+black \
+--user
+
 python3 -m pip install --user --upgrade setuptools wheel
 python3 -m pip install --user --upgrade twine
 
@@ -27,11 +30,11 @@ export GO_VERSION="1.14.2"
 (
     tmp_folder=$(mktemp -d)
     cd "$tmp_folder" || exit
-
+    
     sudo rm -rf /usr/local/go
     wget "https://dl.google.com/go/go$GO_VERSION.linux-amd64.tar.gz"
     sudo tar -C /usr/local -xzf "go$GO_VERSION.linux-amd64.tar.gz"
-
+    
     rm -rf "$tmp_folder"
 )
 export GOPATH=$HOME/go
@@ -49,6 +52,9 @@ sudo chmod +x /usr/local/bin/docker-compose
 ## monitoring
 sudo apt install -y htop iotop sensors nethogs
 
+## system
+npm i -g brightness
+
 ## files & compression
 sudo apt install -y p7zip-full unzip
 sudo apt install -y jdupes
@@ -61,6 +67,15 @@ sudo apt install -y bash-completion
 sudo apt install -y moreutils
 sudo apt install -y colordiff
 sudo apt install -y autojump
+
+## fzf
+(
+    tmp_dir=$(mktemp -d)
+    cd "$tmp_dir" || exit
+    
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install --no-update-rc --key-bindings --completion
+)
 
 ## tmux
 sudo apt install -y tmux
@@ -98,15 +113,6 @@ sudo chown -R "$USER" ~/.vim
     shellcheck --version
     
     rm -rf "$tmp_folder"
-)
-
-## fzf
-(
-    tmp_dir=$(mktemp -d)
-    cd "$tmp_dir" || exit
-    
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install --no-update-rc --key-bindings --completion
 )
 
 ## sdkman

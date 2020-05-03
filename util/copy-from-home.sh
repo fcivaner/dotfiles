@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # copies dotfiles from home if a symlink farm is not used.
 

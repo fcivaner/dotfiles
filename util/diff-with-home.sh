@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # takes a diff with home if a symlink farm is not used.
 

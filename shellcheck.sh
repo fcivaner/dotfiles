@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 scripts=$(find . -name "*.sh")
 

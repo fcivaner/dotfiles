@@ -1,8 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-paths=$(cat ~/.paths)
-
-for path in $paths
-do
-  PATH=$PATH:$path
-done
+if [ "$BASH" ];then
+    PATHS_FILE="$HOME/.paths"
+    
+    if [ -f "$PATHS_FILE" ]; then
+        paths=$(cat "$PATHS_FILE")
+        
+        for p in $paths
+        do
+            PATH=$PATH:$p
+        done
+    fi
+fi

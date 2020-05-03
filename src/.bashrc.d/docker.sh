@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 dockerbash() {
     docker exec -i -t "$1" /bin/bash

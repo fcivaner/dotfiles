@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 alias la='ls -AF'
 alias l='ls -CF'

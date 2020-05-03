@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ## message count
 alias kafka-msg-count="/opt/kafka/bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list \$MASTER_ADDR:9092 --topic "

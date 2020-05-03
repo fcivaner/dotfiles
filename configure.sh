@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 execute_order=" \
         configure-scripts/sync-dotfiles.sh \

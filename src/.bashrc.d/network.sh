@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set_hostname() {
     echo "$1" > /etc/hostname
