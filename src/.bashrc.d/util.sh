@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+alias rm='safe-rm'
+
 alias la='ls -AF'
 alias l='ls -CF'
 alias ll="ls -lhAGF"
@@ -16,6 +18,9 @@ alias wget='wget -c'
 
 ## calculator
 alias bc='bc -l'
+
+## locate
+alias loc='locate'
 
 ## get_targz
 get_targz() {
@@ -37,3 +42,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
+
+## capture output
+capture_output(){
+    $1 > out.log 2>error.log
+}

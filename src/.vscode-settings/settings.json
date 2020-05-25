@@ -22,16 +22,22 @@
         "*.FCMacro": "python"
     },
     "files.exclude": {
+        // python
         "**/__pycache__": true,
         "**/.pytest_cache": true,
         "**/.tox": true,
         "**/*.egg-info": true,
         "**/*.pyc": true,
+        // terraform
+        "**/.terraform": true,
+        "**/*.tfstate": true,
+        "**/*.tfstate.*": true,
+        // other
         "**/.classpath": true,
         "**/.project": true,
         "**/.idea": true,
         "**/.settings": true,
-        "**/.factorypath": true
+        "**/.factorypath": true,
     },
     // search
     "search.exclude": {
@@ -58,7 +64,10 @@
         "**/*.snm": true,
         "**/*.toc": true,
         "**/*.lof": true,
-        "**/*.lot": true
+        "**/*.lot": true,
+        // terraform
+        "**/*.tfstate": true,
+        "**/*.tfstate.backup": true
     },
     "files.autoSave": "afterDelay",
     "editor.fontSize": 14,
@@ -69,7 +78,7 @@
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 3,
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },

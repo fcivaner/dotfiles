@@ -14,13 +14,16 @@ if [ "$BASH" ];then
     ## check the window size after each command and, if necessary,
     ## update the values of LINES and COLUMNS.
     shopt -s checkwinsize
+
+    ## editor
+    export VISUAL=vim
     
     ## bash history configuration
     HISTCONTROL=
     HISTSIZE=100000
     HISTFILESIZE=2000000
     HISTTIMEFORMAT=$(echo -e "\e[90m[%d-%m-%yT%H-%M-%S]\e[39m  ")
-    HISTIGNORE='rm *:git reset*:g reset*:*password*:[ \t]*'
+    HISTIGNORE='rm *:exit:*poweroff:*reboot:git reset*:g reset*:*password*:export AWS_*: *'
     
     ## enable programmable completion features (you don't need to enable
     ## this, if it's already enabled in /etc/bash.bashrc and /etc/profile
