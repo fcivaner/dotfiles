@@ -30,7 +30,6 @@
         "**/*.pyc": true,
         // terraform
         "**/.terraform": true,
-        "**/*.tfstate": true,
         "**/*.tfstate.*": true,
         // other
         "**/.classpath": true,
@@ -78,7 +77,7 @@
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "window.zoomLevel": 3,
+    "window.zoomLevel": 2,
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },

@@ -15,7 +15,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'plasticboy/vim-markdown'
-Plug 'vim-scripts/bash-support.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'elzr/vim-json'
 

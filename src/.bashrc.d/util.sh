@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 alias rm='safe-rm'
+alias rmdir='/bin/rm -d'
 
 alias la='ls -AF'
 alias l='ls -CF'
@@ -34,7 +35,7 @@ alias get_targz="get_targz"
 ## time
 alias get_timestamp="date -u +'%Y-%m-%dT%H-%M-%SZ'"
 
-## Add an "alert" alias for long running commands.  Use like so:
+## Add an "alert" alias for long running commands. Use like so:
 ##   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 

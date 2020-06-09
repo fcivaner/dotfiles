@@ -27,6 +27,9 @@ black \
 python3 -m pip install --user --upgrade setuptools wheel
 python3 -m pip install --user --upgrade twine
 
+## ruby
+sudo apt-get install ruby-full
+
 ## go
 export GO_VERSION="1.14.2"
 (
