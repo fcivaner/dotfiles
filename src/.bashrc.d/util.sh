@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+## files
+alias chx='chmod +x'
 alias rm='safe-rm'
 alias rmdir='/bin/rm -d'
 
@@ -7,12 +9,15 @@ alias la='ls -AF'
 alias l='ls -CF'
 alias ll="ls -lhAGF"
 
-alias overkill='kill -9'
+alias loc='locate'
 
 alias tree='tree -a -I '.git''
 
-## wget auto continue
-alias wget='wget -c'
+## processes
+alias overkill='kill -9'
+
+## time
+alias get_timestamp="date -u +'%Y-%m-%dT%H-%M-%SZ'"
 
 ## make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -20,8 +25,8 @@ alias wget='wget -c'
 ## calculator
 alias bc='bc -l'
 
-## locate
-alias loc='locate'
+## wget auto continue
+alias wget='wget -c'
 
 ## get_targz
 get_targz() {
@@ -31,9 +36,6 @@ get_targz() {
     rm "$2.tar.gz"
 }
 alias get_targz="get_targz"
-
-## time
-alias get_timestamp="date -u +'%Y-%m-%dT%H-%M-%SZ'"
 
 ## Add an "alert" alias for long running commands. Use like so:
 ##   sleep 10; alert

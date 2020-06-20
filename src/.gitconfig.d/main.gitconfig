@@ -24,6 +24,7 @@
   cam = !git add -A && git commit --amend -m
   car = !git add -A && git commit --amend --reuse-message=HEAD
   ms = merge --squash --no-commit
+  mst = merge --squash --no-commit --strategy-option theirs
   prf = push origin HEAD:refs/for/master
   dt = difftool --dir-diff
   gsu = submodule update --remote
