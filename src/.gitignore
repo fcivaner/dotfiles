@@ -1,5 +1,7 @@
 syntax: glob
 
+classes/
+
 ## os
 .DS_Store
 Thumbs.db
@@ -21,6 +23,7 @@ node_modules/
 
 ## common
 .~*
+[~][$]*
 *.~lock*
 *.log
 *.zip

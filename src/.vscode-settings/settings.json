@@ -3,8 +3,6 @@
     "breadcrumbs.enabled": false,
     // terminal
     "terminal.integrated.scrollback": 1000000,
-    // python
-    "python.pythonPath": "python3",
     "python.jediEnabled": false,
     "python.linting.pycodestyleEnabled": true,
     "python.linting.pylintEnabled": true,
@@ -83,5 +81,6 @@
     },
     "explorer.confirmDelete": false,
     "python.formatting.provider": "black",
-    "python.languageServer": "Microsoft"
+    "python.languageServer": "Microsoft",
+    "explorer.confirmDragAndDrop": false
 }

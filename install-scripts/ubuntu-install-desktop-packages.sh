@@ -79,6 +79,12 @@ docker pull zricethezav/gitleaks
     sudo ./aws/install
 )
 
+## codecs
+sudo apt install -y ffmpeg
+
+## utilities
+sudo apt install -y jdupes
+
 ## install desktop tools
 
 ## gdebi
