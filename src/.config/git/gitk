@@ -1,6 +1,6 @@
-set mainfont {{DejaVu Sans} 12}
-set textfont {{DejaVu Sans Mono} 12}
-set uifont {{DejaVu Sans} 12 bold}
+set mainfont {{DejaVu Sans} 14}
+set textfont {{DejaVu Sans Mono} 14}
+set uifont {{DejaVu Sans} 14 bold}
 set tabstop 8
 set findmergefiles 0
 set maxgraphpct 50
@@ -51,12 +51,12 @@ set indexcirclecolor #00ff00
 set circlecolors {white blue gray blue blue}
 set linkfgcolor blue
 set circleoutlinecolor black
-set geometry(main) 1920x987+0+30
+set geometry(main) 1920x1008+0+0
 set geometry(state) normal
 set geometry(topwidth) 1920
 set geometry(topheight) 225
-set geometry(pwsash0) "670 1"
-set geometry(pwsash1) "1006 1"
-set geometry(botwidth) 1892
-set geometry(botheight) 757
+set geometry(pwsash0) "939 1"
+set geometry(pwsash1) "971 1"
+set geometry(botwidth) 996
+set geometry(botheight) 778
 set permviews {}

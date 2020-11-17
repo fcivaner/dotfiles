@@ -2,7 +2,7 @@
 
 if [ "$BASH" ];then
     alias c='clear'
-    alias reload="source ~/.bashrc"
+    alias reload-dotfiles="source ~/.bashrc"
     alias histsave="history -a"
     alias histload="history -r"
     

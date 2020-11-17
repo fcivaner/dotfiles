@@ -43,6 +43,7 @@ sudo apt install -y autojump
 
 ## tmux
 sudo apt install -y tmux
+sudo apt install -y xclip xsel # for tmux-yank
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ## vim
