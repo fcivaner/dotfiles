@@ -2,6 +2,7 @@
 
 alias g="git"
 alias gs="git status"
+alias gp="git push"
 
 ## configure git bash completion
 if [ -n "$BASH_VERSION" ];
@@ -9,7 +10,8 @@ then
     common_locations="
     /usr/local/git/contrib/completion/git-completion.bash
     /usr/local/git/contrib/completion/git-prompt.sh
-    /usr/share/bash-completion/completions/git"
+    /usr/share/bash-completion/completions/git
+    ~/.git-completion.sh"
     
     for loc in $common_locations
     do

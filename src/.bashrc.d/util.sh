@@ -8,6 +8,7 @@ alias rmdir='/bin/rm -d'
 alias la='ls -AF'
 alias l='ls -CF'
 alias ll="ls -lhAGF"
+alias less="less -S"
 
 alias loc='locate'
 

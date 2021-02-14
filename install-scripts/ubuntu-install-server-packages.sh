@@ -11,6 +11,10 @@ sudo apt install -y p7zip-full unzip
 sudo apt install -y jdupes
 sudo apt install -y wipe
 sudo apt install -y mmv
+sudo apt install -y direnv
+
+## git
+sudo apt install -y git
 
 ## monitoring
 sudo apt install -y htop iotop lm-sensors nethogs
@@ -57,6 +61,7 @@ sudo chown -R "$USER" ~/.vim
 
 ## nodejs
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 ## npm packages
 sudo npm i -g safe-rm

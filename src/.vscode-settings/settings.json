@@ -1,6 +1,6 @@
 {
     "editor.suggestSelection": "first",
-    "breadcrumbs.enabled": false,
+    "breadcrumbs.enabled": true,
     // terminal
     "terminal.integrated.scrollback": 1000000,
     "python.jediEnabled": false,
@@ -88,5 +88,8 @@
     "python.defaultInterpreterPath": "python3",
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[nginx]": {
+        "editor.defaultFormatter": "raynigon.nginx-formatter"
     }
 }
