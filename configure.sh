@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
 execute_order=" \
-        configure-scripts/sync-dotfiles.sh \
-        configure-scripts/configure-vscode.sh \
-        configure-scripts/configure-git.sh \
-        configure-scripts/configure-tmux.sh \
-        "
+configure-scripts/sync-dotfiles.sh \
+configure-scripts/configure-vscode.sh \
+configure-scripts/configure-git.sh \
+configure-scripts/configure-tmux.sh \
+configure-scripts/configure-vim.sh
+"
 
 for script in $execute_order
 do
