@@ -14,6 +14,8 @@ alias loc='locate'
 
 alias tree='tree -a -I '.git''
 
+alias hosts='sudo vim /etc/hosts'
+
 ## processes
 alias overkill='kill -9'
 

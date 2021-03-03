@@ -6,12 +6,12 @@
 sudo apt install software-properties-common
 
 ## files & compression
-sudo apt install -y stow
-sudo apt install -y p7zip-full unzip
-sudo apt install -y jdupes
-sudo apt install -y wipe
-sudo apt install -y mmv
-sudo apt install -y direnv
+sudo apt install -y stow \
+p7zip-full unzip \
+jdupes \
+wipe \
+mmv \
+direnv
 
 ## git
 sudo apt install -y git
@@ -20,11 +20,11 @@ sudo apt install -y git
 sudo apt install -y htop iotop lm-sensors nethogs
 
 ## terminal tools
-sudo apt install -y ranger
-sudo apt install -y bash-completion
-sudo apt install -y moreutils
-sudo apt install -y colordiff
-sudo apt install -y autojump
+sudo apt install -y ranger \
+bash-completion \
+moreutils \
+colordiff \
+autojump
 
 ## fzf
 (
