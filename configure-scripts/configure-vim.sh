@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-vim +PlugInstall +qall
+vim +silent +PlugInstall +qall
